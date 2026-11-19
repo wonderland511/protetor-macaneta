@@ -47,9 +47,19 @@ h2.sec{font-size:clamp(26px,3.6vw,36px);letter-spacing:-.02em;margin:0 0 6px}
 .sub{color:var(--muted);margin:0 0 22px}
 
 /* cards */
-.grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px;align-items:stretch}
-@media (max-width:1020px){ .grid{grid-template-columns:repeat(2,minmax(0,1fr))} }
-@media (max-width:700px){ .grid{grid-template-columns:1fr} }
+.grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px;align-items:stretch}
+@media (max-width:760px){ .grid{grid-template-columns:1fr} }
+.card.top{border-color:var(--accent);box-shadow:0 0 0 1px var(--accent),0 20px 50px -20px var(--glow)}
+.badge{display:inline-flex;align-items:center;gap:6px;background:var(--accent);color:var(--accent-ink);font-weight:700;font-size:13px;padding:6px 12px;border-radius:999px}
+.toplabel{position:absolute;left:12px;top:12px;z-index:2}
+.btn.alt{background:var(--bg2);color:var(--text);border-color:var(--line)}
+.btn.alt:hover{border-color:var(--accent)}
+.verdict{margin:24px 0 0;border-radius:var(--radius);padding:24px;background:linear-gradient(135deg,var(--glow),transparent 70%),var(--card);border:1px solid var(--line);display:grid;grid-template-columns:200px 1fr;gap:24px;align-items:center}
+.verdict img{width:200px;height:200px;object-fit:contain;background:var(--photo);border-radius:18px;padding:8px}
+.verdict h2{font-size:clamp(24px,3.4vw,32px);letter-spacing:-.02em;margin:10px 0 8px;line-height:1.15}
+.verdict p{margin:0 0 10px;color:var(--muted)}
+.verdict ul{margin:6px 0 14px;padding-left:20px}.verdict li{margin:3px 0}
+@media (max-width:720px){ .verdict{grid-template-columns:1fr;padding:20px} .verdict img{width:100%;height:220px} }
 .card{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;display:flex;flex-direction:column}
 .card .body{padding:20px 20px 22px;display:flex;flex-direction:column;gap:12px;flex:1}
 .shop{font-size:13px;font-weight:700;letter-spacing:.05em;text-transform:uppercase;color:var(--accent)}
@@ -124,20 +134,38 @@ footer p{margin:6px 0}
   <div class="wrap">
     <div class="hero-top">
       <div>
-        <div class="eyebrow reveal">Силиконовые накладки · доставка по Бразилии</div>
-        <h1 class="reveal d1">Накладки на дверные ручки</h1>
+        <div class="eyebrow reveal">Мягкие чехлы на ручку · без присосок</div>
+        <h1 class="reveal d1">Симпатичные накладки на дверные ручки</h1>
       </div>
       <img class="sticker reveal d2" src="img/kotik.jpg" alt="Милый котик сидит у двери и ждёт, когда её откроют" width="124" height="124">
     </div>
-    <p class="lead reveal d2">Мягкий силиконовый чехол надевается на Г-образную ручку. Если дверь распахнуть, ручка упирается в стену силиконом, а не металлом, и не бьёт штукатурку. Ниже три варианта, у каждого цена за 1 штуку и за 6 ручек.</p>
+    <p class="lead reveal d2">Силиконовый чехол надевается на Г-образную ручку целиком и закрывает острые углы и края, чтобы об них не царапаться. Здесь только чехлы без присосок и упоров. Все четыре варианта с Amazon Brasil, цена указана за 1 штуку и за 6 ручек.</p>
     <div class="chips reveal d3">
       <span class="chip">Нужно 6 штук</span>
-      <span class="chip">Цены без доставки</span>
+      <span class="chip">Без присосок</span>
       <span class="chip">Курс ЦБ Бразилии (PTAX): R$ 5,8102 за $1 на 18.11.2026</span>
     </div>
+
+    <div class="verdict reveal d4">
+      <img src="img/mishki-2.jpg" alt="Два бежевых чехла-мишки" referrerpolicy="no-referrer">
+      <div>
+        <span class="badge">★ Лучший выбор</span>
+        <h2>Мишки: 6 штук за R$ 232,23 ≈ $39,97</h2>
+        <p>Это 3 упаковки по 2 штуки, доставка R$ 8,90 ≈ $1,53. Приезжают 2 декабря, у остальных вариантов срок растянут до 9–14 декабря.</p>
+        <ul>
+          <li>Чехол гладкий и закруглённый, без углов и рёбер. Закрывает ручку целиком, а на конце мордочка мишки с ушками.</li>
+          <li>В наличии 4 упаковки, так что 6 штук набираются.</li>
+          <li>Самый дешёвый вариант за 6 штук, и все 6 в одном объявлении.</li>
+        </ul>
+        <div class="btns" style="margin-top:0">
+          <a class="btn" href="https://www.amazon.com.br/dp/B0FH23SNJ5" target="_blank" rel="noopener">Купить на Amazon</a>
+        </div>
+      </div>
+    </div>
+
     <div class="note reveal d4">
-      <p><b>Перед заказом измерьте ручку:</b> толщину у основания и длину рычага. Ни один из трёх магазинов не указывает размер отверстия в чехле, поэтому посадку проверить заранее нельзя.</p>
-      <p><b>Срок до 26 ноября</b> ни у одного варианта не подтверждён. Дату доставки на ваш CEP магазин покажет при оформлении заказа.</p>
+      <p><b>Сроки.</b> Ни один вариант не приезжает до 26 ноября. Самое раннее — с 30 ноября (вторая «лапка»), у мишек точная дата — 2 декабря. Amazon показывает сроки и доставку для адреса по умолчанию, а точную дату для вашего CEP и итог с налогами покажет при оформлении заказа.</p>
+      <p><b>Перед заказом измерьте ручку:</b> длину рычага и толщину. Размеры каждого чехла указаны в карточке.</p>
     </div>
   </div>
 </header>
@@ -145,116 +173,166 @@ footer p{margin:6px 0}
 <main class="wrap">
 
 <section id="items">
-  <h2 class="sec reveal">Три варианта</h2>
+  <h2 class="sec reveal">Четыре варианта</h2>
   <p class="sub reveal d1">Нажмите на фото, чтобы увеличить. Листать можно свайпом, стрелками или клавишами ← →.</p>
 
   <div class="grid">
 
-    <!-- MERCADO LIVRE -->
-    <article class="card reveal" data-name="Mercado Livre">
-      <div class="nophoto">
-        <b>Фото не загрузилось</b>
-        <p>Mercado Livre не пускает автоматические запросы, поэтому взять фото со страницы товара не получилось. Фото есть на самой странице.</p>
-        <a href="https://produto.mercadolivre.com.br/MLB-7862686798-protetor-capa-de-silicone-para-macaneta-de-porta-sortido-_JM" target="_blank" rel="noopener">Посмотреть фото на Mercado Livre →</a>
+    <!-- МИШКИ -->
+    <article class="card top reveal" data-name="Мишки">
+      <div class="car">
+        <span class="badge toplabel">★ Лучший выбор</span>
+        <div class="track">
+          <button class="slide" type="button"><img src="img/mishki-2.jpg" alt="Два бежевых чехла-мишки" loading="lazy" referrerpolicy="no-referrer"></button>
+          <button class="slide" type="button"><img src="img/mishki-1.jpg" alt="Чехол-мишка на дверной ручке" loading="lazy" referrerpolicy="no-referrer"></button>
+          <button class="slide" type="button"><img src="img/mishki-3.jpg" alt="Размеры чехла-мишки" loading="lazy" referrerpolicy="no-referrer"></button>
+          <button class="slide" type="button"><img src="img/mishki-4.jpg" alt="Силиконовый чехол гнётся, толщина стенки 3 мм" loading="lazy" referrerpolicy="no-referrer"></button>
+        </div>
       </div>
       <div class="body">
-        <div class="shop">Mercado Livre · SAZ</div>
-        <h3>Г-образный силиконовый чехол, цвет на выбор продавца</h3>
-        <p class="desc">Цельный силиконовый чехол размером 15,5 × 9 × 4 см. Надевается на ручку целиком. В названии стоит «sortido», то есть цвет присылают тот, что есть на складе.</p>
-        <div class="tagrow"><span class="tag ok">Самый дешёвый</span><span class="tag ok">Отправка по Бразилии</span><span class="tag warn">Цена не перепроверена</span></div>
+        <div class="shop">Amazon · 2 штуки в упаковке</div>
+        <h3>Силиконовые чехлы-мишки, бежевые</h3>
+        <p class="desc">Гладкий закруглённый чехол на всю ручку, на конце мордочка мишки с ушками. Силикон 3 мм с Г-образным разрезом, поэтому чехол обхватывает ручку плотно. Длина 12,6 см, высота 4,1 см.</p>
+        <div class="tagrow"><span class="tag ok">Доставка 2 декабря</span><span class="tag ok">Хватит на 6 штук</span><span class="tag">Только бежевый</span></div>
         <div class="prices">
-          <div class="pbox"><small>1 штука</small><b>R$ 15,92</b><span>≈ $2,74</span></div>
-          <div class="pbox main"><small>6 штук</small><b>R$ 95,52</b><span>≈ $16,44</span></div>
+          <div class="pbox"><small>Упаковка, 2 штуки</small><b>R$ 77,41</b><span>≈ $13,32</span></div>
+          <div class="pbox main"><small>6 штук (3 упаковки)</small><b>R$ 232,23</b><span>≈ $39,97</span></div>
         </div>
-        <div class="pmeta">Цена из вашей таблицы. Mercado Livre не дал проверить её автоматически.</div>
+        <div class="pmeta">Доставка R$ 8,90 ≈ $1,53 · в наличии 4 упаковки</div>
         <div class="pc">
           <div class="plus"><h4>Плюсы</h4><ul>
-            <li>Самый дешёвый: R$ 95,52 за 6 штук.</li>
-            <li>По вашей таблице в наличии больше 25 штук, так что 6 штук хватит.</li>
-            <li>Размер чехла указан: 15,5 × 9 × 4 см.</li>
+            <li>По описанию форма «гладкая и закруглённая, без краёв и углов», то есть ровно то, что нужно.</li>
+            <li>Точная дата доставки — 2 декабря.</li>
+            <li>Моется водой, по описанию не желтеет со временем.</li>
           </ul></div>
           <div class="minus"><h4>Минусы</h4><ul>
-            <li>Цвет выбрать нельзя: присылают случайные цвета.</li>
-            <li>Размер отверстия не указан, поэтому посадку на вашу ручку заранее не проверить.</li>
-            <li>Есть ли упор-присоска, по имеющимся данным не видно.</li>
-            <li>Срок доставки в Рио не подтверждён.</li>
+            <li>Длина 12,6 см: на длинной ручке кончик рычага может остаться открытым.</li>
+            <li>Есть только бежевый цвет.</li>
+            <li>Отзывов пока нет.</li>
           </ul></div>
         </div>
         <div class="btns">
-          <a class="btn" href="https://produto.mercadolivre.com.br/MLB-7862686798-protetor-capa-de-silicone-para-macaneta-de-porta-sortido-_JM" target="_blank" rel="noopener">Открыть на Mercado Livre</a>
+          <a class="btn" href="https://www.amazon.com.br/dp/B0FH23SNJ5" target="_blank" rel="noopener">Открыть на Amazon</a>
         </div>
       </div>
     </article>
 
-    <!-- SHOPEE -->
-    <article class="card reveal d1" data-name="Shopee">
+    <!-- ЛАПКА -->
+    <article class="card reveal d1" data-name="Кошачья лапка">
       <div class="car">
         <div class="track">
-          <button class="slide" type="button"><img src="img/shopee-1.jpg" alt="Серый силиконовый чехол с присоской на дверной ручке" loading="lazy" referrerpolicy="no-referrer"></button>
+          <button class="slide" type="button"><img src="img/lapka-1.jpg" alt="Белый чехол в виде кошачьей лапки на дверной ручке" loading="lazy" referrerpolicy="no-referrer"></button>
+          <button class="slide" type="button"><img src="img/lapka-2.jpg" alt="Кошачья лапка на ручке, вид сбоку" loading="lazy" referrerpolicy="no-referrer"></button>
+          <button class="slide" type="button"><img src="img/lapka-3.jpg" alt="Белая лапка на ручке с золотой розеткой" loading="lazy" referrerpolicy="no-referrer"></button>
+          <button class="slide" type="button"><img src="img/lapka-4.jpg" alt="Оранжевая кошачья лапка на ручке" loading="lazy" referrerpolicy="no-referrer"></button>
+          <button class="slide" type="button"><img src="img/lapka-5.jpg" alt="Чехол-лапка отдельно" loading="lazy" referrerpolicy="no-referrer"></button>
         </div>
       </div>
       <div class="body">
-        <div class="shop">Shopee · MB Shopping</div>
-        <h3>Силиконовый чехол с присоской-упором</h3>
-        <p class="desc">Цельный чехол на ручку. Сбоку отходит ножка с присоской: при открытии двери она упирается в стену. На рычаге есть декоративные отверстия. Можно взять по одной штуке или комплектом из 3.</p>
-        <div class="tagrow"><span class="tag ok">Есть комплект из 3</span><span class="tag ok">Присоска защищает стену</span><span class="tag warn">Цена не перепроверена</span></div>
+        <div class="shop">Amazon · по 1 штуке</div>
+        <h3>Чехол «кошачья лапка», белый или оранжевый</h3>
+        <p class="desc">Силиконовый чехол во всю ручку. У основания ручки кошачья лапка с подушечками, на рычаге маленькие следы лап. Размер 15,5 × 5 см. По описанию закрывает углы ручки, чтобы об них не биться.</p>
+        <div class="tagrow"><span class="tag ok">Самый милый</span><span class="tag">Белый и оранжевый</span><span class="tag warn">Нужно 2 объявления</span></div>
         <div class="prices">
-          <div class="pbox"><small>1 штука</small><b>от R$ 16,92</b><span>≈ $2,91</span></div>
-          <div class="pbox main"><small>6 штук</small><b>от R$ 101,52</b><span>≈ $17,47</span></div>
+          <div class="pbox"><small>1 штука</small><b>R$ 23,96–69,56</b><span>≈ $4,12–11,97</span></div>
+          <div class="pbox main"><small>6 штук</small><b>R$ 234,96</b><span>≈ $40,44</span></div>
         </div>
-        <div class="pmeta">Цена из вашей таблицы. Shopee без входа в аккаунт не показывает ни цену, ни доставку.</div>
+        <div class="pmeta">Как набрать 6 штук: в дешёвом объявлении (R$ 23,96, доставка бесплатно) осталось только 2 белых и 2 оранжевых, ещё 2 белых — во втором объявлении по R$ 69,56 (доставка R$ 3). Если брать все 6 во втором объявлении, выйдет R$ 417,36 ≈ $71,83. Доставка 30 ноября – 9 декабря.</div>
         <div class="pc">
           <div class="plus"><h4>Плюсы</h4><ul>
-            <li>Почти так же дёшево, как на Mercado Livre.</li>
-            <li>Присоска гасит удар и держит дверь у стены.</li>
-            <li>Можно взять 2 комплекта по 3 штуки.</li>
+            <li>Самый «котиковый» и симпатичный вариант.</li>
+            <li>Длина 15,5 см, рычаг закрыт почти целиком.</li>
+            <li>Можно сочетать белые и оранжевые.</li>
           </ul></div>
           <div class="minus"><h4>Минусы</h4><ul>
-            <li>Внутренние размеры не указаны.</li>
-            <li>Цена «от»: итог зависит от выбранного варианта.</li>
-            <li>Стоимость и срок доставки видно только после входа в аккаунт.</li>
+            <li>В дешёвом объявлении всего 4 штуки, поэтому придётся заказывать в двух местах.</li>
+            <li>В дешёвом объявлении под зелёным, розовым, синим и фиолетовым цветами на фото полотенца для волос, а не чехлы. Выбирайте только белый или оранжевый (Marrom).</li>
+            <li>Отзывов пока нет.</li>
           </ul></div>
         </div>
         <div class="btns">
-          <a class="btn" href="https://shopee.com.br/Protetor-De-Porta-Anti-impacto-Prote%C3%A7%C3%A3o-De-Ma%C3%A7aneta-Capa-Protetora-Massaneta-Silicone-i.1443439070.22193636071" target="_blank" rel="noopener">Открыть на Shopee</a>
+          <a class="btn" href="https://www.amazon.com.br/dp/B0HJZQX9MC" target="_blank" rel="noopener">Белая · R$ 23,96</a>
+          <a class="btn alt" href="https://www.amazon.com.br/dp/B0HJZKLT33" target="_blank" rel="noopener">Оранжевая · R$ 23,96</a>
+          <a class="btn alt" href="https://www.amazon.com.br/dp/B0HNV696Z7" target="_blank" rel="noopener">Белая · R$ 69,56 (в наличии)</a>
         </div>
       </div>
     </article>
 
-    <!-- SHEIN -->
-    <article class="card reveal d2" data-name="SHEIN">
+    <!-- ЗВЕРЮШКИ -->
+    <article class="card reveal d2" data-name="Зверюшки">
       <div class="car">
         <div class="track">
-          <button class="slide" type="button"><img src="img/shein-2.jpg" alt="Бирюзовый чехол с присоской на дверной ручке" loading="lazy" referrerpolicy="no-referrer"></button>
-          <button class="slide" type="button"><img src="img/shein-1.jpg" alt="Присоска чехла упирается в стену при открытой двери" loading="lazy" referrerpolicy="no-referrer"></button>
-          <button class="slide" type="button"><img src="img/shein-3.jpg" alt="Чехол отдельно, вид сбоку" loading="lazy" referrerpolicy="no-referrer"></button>
-          <button class="slide" type="button"><img src="img/shein-4.jpg" alt="Чехол из гибкого силикона сгибается в руке" loading="lazy" referrerpolicy="no-referrer"></button>
+          <button class="slide" type="button"><img src="img/zveri-1.jpg" alt="Зелёный чехол-зверюшка на дверной ручке" loading="lazy" referrerpolicy="no-referrer"></button>
+          <button class="slide" type="button"><img src="img/zveri-2.jpg" alt="Коричневый чехол-зверюшка на белой двери" loading="lazy" referrerpolicy="no-referrer"></button>
+          <button class="slide" type="button"><img src="img/zveri-3.jpg" alt="Коричневый чехол на ручке у зелёной двери" loading="lazy" referrerpolicy="no-referrer"></button>
+          <button class="slide" type="button"><img src="img/zveri-4.jpg" alt="Три цвета чехлов: коричневый, зелёный, серый" loading="lazy" referrerpolicy="no-referrer"></button>
+          <button class="slide" type="button"><img src="img/zveri-5.jpg" alt="Размеры чехла-зверюшки" loading="lazy" referrerpolicy="no-referrer"></button>
         </div>
       </div>
       <div class="body">
-        <div class="shop">SHEIN · Envio Nacional</div>
-        <h3>Гибкий силиконовый чехол с присоской</h3>
-        <p class="desc">Та же конструкция: чехол на рычаг ручки и присоска-упор для стены. Силикон мягкий, на фото чехол сгибают пополам. На фото бирюзовый цвет. Продаётся по одной штуке.</p>
-        <div class="tagrow"><span class="tag ok">Цена проверена 19.11</span><span class="tag ok">Склад в Бразилии</span><span class="tag ok">В наличии</span></div>
+        <div class="shop">Amazon · по 1 штуке</div>
+        <h3>Чехол-зверюшка с рожком и ушками</h3>
+        <p class="desc">Длинный силиконовый чехол в виде мультяшного зверька: у основания ручки мордочка с рожком, дальше «тело» во всю длину рычага. Размер 17 × 3,8 см, самый длинный из четырёх. На фото коричневый, зелёный и серый.</p>
+        <div class="tagrow"><span class="tag ok">Доставка бесплатно</span><span class="tag ok">Самый длинный</span><span class="tag warn">Цвет не выбрать</span></div>
         <div class="prices">
-          <div class="pbox"><small>1 штука</small><b>R$ 36,34</b><span>≈ $6,25</span></div>
-          <div class="pbox main"><small>6 штук</small><b>R$ 218,04</b><span>≈ $37,53</span></div>
+          <div class="pbox"><small>1 штука</small><b>R$ 48,02</b><span>≈ $8,26</span></div>
+          <div class="pbox main"><small>6 штук</small><b>R$ 288,12</b><span>≈ $49,59</span></div>
         </div>
-        <div class="pmeta">В вашей таблице было R$ 17,90 за штуку. Сейчас на странице R$ 36,34, это в 2 раза дороже.</div>
+        <div class="pmeta">Доставка бесплатно, 1–9 декабря · в наличии 9 штук</div>
         <div class="pc">
           <div class="plus"><h4>Плюсы</h4><ul>
-            <li>Отправка со склада в Бразилии (Envio Nacional), а не международная доставка.</li>
-            <li>Хорошие фото: видно, как чехол сидит на ручке и как присоска встаёт в стену.</li>
-            <li>Единственная цена, которую удалось проверить сегодня.</li>
+            <li>Длина 17 см, закрывает даже длинную ручку.</li>
+            <li>Все 6 штук в одном объявлении, доставка бесплатная.</li>
+            <li>Спокойные пастельные цвета.</li>
           </ul></div>
           <div class="minus"><h4>Минусы</h4><ul>
-            <li>Самый дорогой: R$ 218,04 за 6 штук, втрое дороже Mercado Livre.</li>
-            <li>Цена с 17,90 выросла до 36,34 R$ и может меняться дальше.</li>
-            <li>Размеры чехла и отверстия не указаны.</li>
+            <li>Цвет и вид зверька при заказе не выбрать: на странице нет вариантов.</li>
+            <li>Рожок у основания торчит в сторону.</li>
+            <li>Отзывов пока нет.</li>
           </ul></div>
         </div>
         <div class="btns">
-          <a class="btn" href="https://br.shein.com/Flexible-Silicone-Door-Handle-Wall-Protector-With-Suction-Cup-p-580531807.html" target="_blank" rel="noopener">Открыть на SHEIN</a>
+          <a class="btn" href="https://www.amazon.com.br/dp/B0GV6CJM96" target="_blank" rel="noopener">Открыть на Amazon</a>
+        </div>
+      </div>
+    </article>
+
+    <!-- КОТИК ВО ВСЮ РУЧКУ -->
+    <article class="card reveal d3" data-name="Котик во всю ручку">
+      <div class="car">
+        <div class="track">
+          <button class="slide" type="button"><img src="img/kotik-ruchka-1.jpg" alt="Серый чехол-котик на дверной ручке" loading="lazy" referrerpolicy="no-referrer"></button>
+          <button class="slide" type="button"><img src="img/kotik-ruchka-2.jpg" alt="Серый котик на ручке, крупно" loading="lazy" referrerpolicy="no-referrer"></button>
+          <button class="slide" type="button"><img src="img/kotik-ruchka-3.jpg" alt="Чёрный вариант чехла-котика" loading="lazy" referrerpolicy="no-referrer"></button>
+          <button class="slide" type="button"><img src="img/kotik-ruchka-4.jpg" alt="Размеры чехла-котика" loading="lazy" referrerpolicy="no-referrer"></button>
+          <button class="slide" type="button"><img src="img/kotik-ruchka-5.jpg" alt="Чехол-котик отдельно" loading="lazy" referrerpolicy="no-referrer"></button>
+        </div>
+      </div>
+      <div class="body">
+        <div class="shop">Amazon · по 1 штуке</div>
+        <h3>Котик, который лежит на ручке</h3>
+        <p class="desc">Чехол в виде вытянутого котика: у основания мордочка и ушки, на конце пятнистые задние лапки. Размер 15,7 × 4,7 см, высота 5,7 см. Есть серый с белыми пятнами и чёрный с рыжими.</p>
+        <div class="tagrow"><span class="tag ok">Самый эффектный</span><span class="tag">Серый или чёрный</span><span class="tag warn">Самый дорогой</span></div>
+        <div class="prices">
+          <div class="pbox"><small>1 штука</small><b>R$ 112,33</b><span>≈ $19,33</span></div>
+          <div class="pbox main"><small>6 штук</small><b>R$ 673,98</b><span>≈ $116,00</span></div>
+        </div>
+        <div class="pmeta">Доставка R$ 40 ≈ $6,88, 8–14 декабря · в наличии</div>
+        <div class="pc">
+          <div class="plus"><h4>Плюсы</h4><ul>
+            <li>Самый красивый и необычный дизайн: целый котик вдоль ручки.</li>
+            <li>Длина 15,7 см, рычаг закрыт целиком.</li>
+            <li>Два цвета на выбор, оба в наличии.</li>
+          </ul></div>
+          <div class="minus"><h4>Минусы</h4><ul>
+            <li>Дороже остальных почти в 3 раза: R$ 673,98 за 6 штук.</li>
+            <li>Самая поздняя доставка: 8–14 декабря.</li>
+            <li>Отзывов пока нет.</li>
+          </ul></div>
+        </div>
+        <div class="btns">
+          <a class="btn" href="https://www.amazon.com.br/dp/B0FJHWWVWX" target="_blank" rel="noopener">Серый · Amazon</a>
+          <a class="btn alt" href="https://www.amazon.com.br/dp/B0FJJ6S2ZM" target="_blank" rel="noopener">Чёрный · Amazon</a>
         </div>
       </div>
     </article>
@@ -264,19 +342,17 @@ footer p{margin:6px 0}
 
 <section id="compare">
   <h2 class="sec reveal">Сравнение</h2>
-  <p class="sub reveal d1">Цены без доставки, пересчёт по курсу R$ 5,8102 за $1.</p>
+  <p class="sub reveal d1">Пересчёт в доллары по курсу R$ 5,8102 за $1.</p>
   <div class="tbl-wrap reveal d2">
     <table>
-      <thead><tr><th></th><th>Mercado Livre</th><th>Shopee</th><th>SHEIN</th></tr></thead>
+      <thead><tr><th></th><th>Мишки ★</th><th>Кошачья лапка</th><th>Зверюшки</th><th>Котик</th></tr></thead>
       <tbody>
-        <tr><th>1 штука</th><td class="low"><b>R$ 15,92</b> ≈ $2,74</td><td>от R$ 16,92 ≈ $2,91</td><td>R$ 36,34 ≈ $6,25</td></tr>
-        <tr><th>6 штук</th><td class="low"><b>R$ 95,52</b> ≈ $16,44</td><td>от R$ 101,52 ≈ $17,47</td><td>R$ 218,04 ≈ $37,53</td></tr>
-        <tr><th>Цена проверена сегодня</th><td class="wr">Нет</td><td class="wr">Нет</td><td class="ok">Да, 19.11</td></tr>
-        <tr><th>Присоска-упор</th><td>Не видно по данным</td><td class="ok">Есть</td><td class="ok">Есть</td></tr>
-        <tr><th>Цвет</th><td>Случайный</td><td>Серый на фото</td><td>Бирюзовый на фото</td></tr>
-        <tr><th>Размер</th><td>15,5 × 9 × 4 см</td><td>Не указан</td><td>Не указан</td></tr>
-        <tr><th>Отправка</th><td>По Бразилии</td><td>Видно после входа</td><td>Со склада в Бразилии</td></tr>
-        <tr><th>Доставка до 26.11</th><td class="wr">Не подтверждена</td><td class="wr">Не подтверждена</td><td class="wr">Не подтверждена</td></tr>
+        <tr><th>6 штук</th><td class="low"><b>R$ 232,23</b> ≈ $39,97</td><td>R$ 234,96 ≈ $40,44</td><td>R$ 288,12 ≈ $49,59</td><td>R$ 673,98 ≈ $116,00</td></tr>
+        <tr><th>Доставка</th><td class="low">R$ 8,90</td><td>Бесплатно + R$ 3</td><td>Бесплатно</td><td>R$ 40</td></tr>
+        <tr><th>Когда приедет</th><td class="low"><b>2 декабря</b></td><td>30 ноября – 9 декабря</td><td>1–9 декабря</td><td>8–14 декабря</td></tr>
+        <tr><th>Длина чехла</th><td class="low">12,6 см</td><td>15,5 см</td><td>17 см</td><td>15,7 см</td></tr>
+        <tr><th>Цвет</th><td class="low">Бежевый</td><td>Белый, оранжевый</td><td>Не выбрать</td><td>Серый, чёрный</td></tr>
+        <tr><th>6 штук в одном объявлении</th><td class="low ok">Да</td><td class="wr">Нет, в двух</td><td class="ok">Да</td><td class="ok">Да</td></tr>
       </tbody>
     </table>
   </div>
@@ -286,7 +362,7 @@ footer p{margin:6px 0}
 
 <footer>
   <div class="wrap">
-    <p>Цены на 19.11.2026. Курс доллара — PTAX Банка Бразилии на 18.11.2026 (курс за 19.11 ещё не опубликован).</p>
+    <p>Цены, наличие и сроки доставки на Amazon.com.br проверены 19.11.2026. Курс доллара — PTAX Банка Бразилии на 18.11.2026 (курс за 19.11 ещё не опубликован).</p>
     <p>Стикер: «Turkey "Please Open the Door!"», автор Steve Evans, CC BY 2.0, Wikimedia Commons.</p>
   </div>
 </footer>
